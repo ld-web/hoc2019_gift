@@ -1,0 +1,25 @@
+{% extends 'root.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/carousel-home.css" media="screen" />
+{% endblock %}
+
+{% block body %}
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                {% block items %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $('.carousel').carousel({
+            interval: 5000
+        });
+    </script>
+{% endblock %}

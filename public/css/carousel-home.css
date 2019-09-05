@@ -1,0 +1,9 @@
+.carousel-item
+{
+    height: 100vh;
+}
+
+.carousel-item .carousel-caption
+{
+    height: 100%;
+}

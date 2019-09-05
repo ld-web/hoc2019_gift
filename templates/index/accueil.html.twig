@@ -1,0 +1,42 @@
+{% extends 'home.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Bienvenue !
+{% endblock %}
+
+{% block items %}
+    <div class="carousel-item active">
+        <img src="/img/slide-1.jpg" class="d-block w-100" alt="Slide 1" />
+        <div class="carousel-caption d-flex justify-content-start align-items-center">
+            <div>
+                <h1 class="text-dark">Soyez généreux comme Bernard Arnault</h1>
+                <p class="text-left mt-4">
+                    <a href="" class="btn btn-primary btn-lg">Voir les dons</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="/img/slide-2.jpg" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-caption d-flex justify-content-start align-items-center">
+            <div>
+                <h1>On aura rien à vous dire, mais écrivez-nous !</h1>
+            <p class="text-left mt-4">
+                <a href="" class="btn btn-dark btn-lg">Contact</a>
+            </p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="/img/slide-3.jpg" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-caption d-flex justify-content-start align-items-center">
+            <div>
+                <h1>Tout ce qu'on veut, c'est votre thune !</h1>
+                <p class="text-left mt-4">
+                    <a href="" class="btn btn-light btn-lg">Connexion</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
