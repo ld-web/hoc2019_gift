@@ -1,0 +1,26 @@
+{#
+    https://symfony.com/doc/current/controller.html#flash-messages
+    On boucle sur tous les message flashes
+    - Pour chaque type (label), on va avoir une collection de messages
+    - On va donc faire une boucle sur les messages de chaque type
+    - Pour chaque message, on génère une div de type alert de Bootstrap
+    https://getbootstrap.com/docs/4.3/components/alerts/
+#}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container mt-4">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div>
+            <a href="{{ path('accueil') }}">Retour à l'accueil</a>
+        </div>
+    </div>
+{% endblock %}
