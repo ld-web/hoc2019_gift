@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Liste des dons
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for gift in gifts %}
+            <div>
+                <p><strong>{{ gift.title }}</strong></p>
+                <p>{{ gift.description }}</p>
+            </div>
+            <hr />
+        {% else %}
+            <div class="alert alert-secondary" role="alert">
+                Aucun don n'a été enregistré...
+                <p>
+                    <a href="">Soyez le premier à donner !</a>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
